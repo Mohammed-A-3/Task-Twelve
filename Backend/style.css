@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Fallback color */
+    background-image: url('https://cdn.pixabay.com/photo/2023/12/28/19/32/synthwave-8474783_960_720.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    margin: 0;
+    padding: 20px;
+    color: #000000; /* Make text color contrast with background */
+}
+
+h1 {
+    text-align: center;
+    color: #a8a4a4; /* Header color */
+}
+
+form {
+    max-width: 400px; /* Reduced max width */
+    margin: 0 auto; /* Center the form */
+    padding: 30px; /* Reduced padding */
+    background: rgba(153, 151, 151, 0.5); /* Slightly transparent background */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px; /* Spacing for labels */
+}
+
+input {
+    width: 100%; /* Full-width inputs */
+    padding: 8px; /* Reduced padding */
+    margin-bottom: 10px; /* Space below inputs */
+    border: 1px solid #685f5f; /* Border color */
+    border-radius: 3px; /* Rounded corners */
+}
+
+button {
+    background-color: #28a796; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    padding: 10px; /* Padding remains the same */
+    width: 100%; /* Full-width button */
+    cursor: pointer; /* Pointer on hover */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 10px; /* Space above the button */
+}
+
+button:hover {
+    background-color: #218838; /* Darker button color on hover */
+}
+
+/* Center the button in the form */
+form > button {
+    display: block; /* Make the button a block element */
+    margin: 0 auto; /* Center the button */
+}
+
+/* Modal Styles */
+.error-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000; /* On top of everything */
+    animation: fadeIn 0.5s; /* Fade in animation */
+}
+
+.error-content {
+    background-color: #f8d7da; /* Light red background */
+    color: #721c24; /* Dark red text */
+    border: 1px solid #f5c6cb; /* Darker red border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px;
+    text-align: center; /* Center text */
+    width: 300px; /* Fixed width for the modal */
+    animation: slideIn 0.5s; /* Slide in animation */
+}
+
+/* Fade in animation for modal */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Fully transparent */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Slide in animation for content */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px); /* Start above */
+    }
+    100% {
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+/* Close button */
+.close-button {
+    cursor: pointer; /* Pointer on hover */
+    font-size: 20px; /* Font size */
+    float: right; /* Position to the right */
+}
+
+/* Valid and Invalid Input Shadows */
+input.valid {
+    box-shadow: 0 0 5px green; /* Green shadow for valid input */
+}
+
+input.invalid {
+    box-shadow: 0 0 5px red; /* Red shadow for invalid input */
+}

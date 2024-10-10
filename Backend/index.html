@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <h1>Register</h1>
+    <form id="registrationForm" action="submit.html" method="GET"> 
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" placeholder="Mohammed" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" placeholder="A" required>
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email" placeholder="example@example.com" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="+91 79090 16731" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="At least 8 characters" required minlength="8">
+
+        <label for="confirmPassword">Password (Confirm):</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Repeat your password" required>
+
+        <button type="submit">Submit</button>
+    </form>
+    
+    <!-- Modal for Error Message -->
+    <div id="error-modal" class="error-modal" style="display: none;">
+        <div class="error-content">
+            <span class="close-button">&times;</span>
+            <strong>Your passwords are mismatched!</strong> <br> Let’s help them get on the same page!
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
