@@ -9,29 +9,28 @@ document.addEventListener("DOMContentLoaded", function() {
         const password = passwordField.value;
         const confirmPassword = confirmPasswordField.value;
 
-        // Hide the modal initially
+       
         errorModal.style.display = 'none';
 
-        // Check if passwords match
+       
         if (password !== confirmPassword) {
-            errorModal.style.display = 'flex'; // Show modal
-            event.preventDefault(); // Prevent form submission
-            // Highlight the password fields in red if they don't match
+            errorModal.style.display = 'flex'; 
+            event.preventDefault(); 
             passwordField.classList.add('invalid');
             confirmPasswordField.classList.add('invalid');
         } else {
-            // Reset styles if passwords match
+            
             passwordField.classList.remove('invalid');
             confirmPasswordField.classList.remove('invalid');
         }
     });
 
-    // Close the modal when the close button is clicked
+    
     closeButton.addEventListener("click", function() {
         errorModal.style.display = 'none';
     });
 
-    // Real-time validation for password length
+    
     passwordField.addEventListener("input", function() {
         if (passwordField.value.length >= 8) {
             passwordField.classList.add('valid');
@@ -42,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Real-time validation for confirm password length
+    
     confirmPasswordField.addEventListener("input", function() {
         if (confirmPasswordField.value.length >= 8) {
             confirmPasswordField.classList.add('valid');
